@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Districts</title>
+    <style>
+        body {
+            font-family:Georgia, 'Times New Roman', Times, serif;
+        }
+
+        h1{
+            text-align: center;
+            color: teal;
+            font-size:60px;
+        }
+
+        h3{
+            text-align: center;
+        }
+
+        .dist-box {
+            background-color:transparent;
+            width: 250px;
+            height: 150px;
+            border: 1px solid transparent;
+            perspective: 1000px;
+        }
+
+        .dist-box-inner {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            transition: transform 1s;
+            transform-style: preserve-3d;
+        }
+
+        .dist-box:hover .dist-box-inner {
+            transform: rotateY(180deg);
+        }
+
+        .dist-box-front, .dist-box-back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+        }
+
+        .dist-box-front {
+            /*background-image: url(https://www.keralatourism.org/images/destination/mobile/sree_padmanabhaswamy_temple_thiruvananthapuram20131031115717_13_1.jpg);*/
+            color: black;
+            background-color: coral;
+        }
+
+        .dist-box-back {
+            background-color:lightyellow;
+            color:maroon;
+            transform: rotateY(180deg);
+            font-family: cursive;
+            font-size: larger;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>DISTRICTS OF KERALA</h1>
+    <h3>Hover over the district box below:</h3><br><br>
+
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <div class="dist-box">
+                    <div class="dist-box-inner">
+                        <div class="dist-box-front" style="background-image: url(https://th.thgim.com/news/national/kerala/isw4xl/article26125873.ece/alternates/FREE_435/TH29-KDR-SC-PADGLF5BGOP73jpgjpg);">
+                            <h2>Trivandrum</h2>
+                        </div>
+                        <div class="dist-box-back">
+                            <br><br>
+                            <p>The Capital city of Kerala</p>
+                            <p style="font-family: Arial, Helvetica, sans-serif; font-size: small;color: black;"><a href="Trivandrum.html" target="-blank">Click here</a> to know more</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="dist-box">
+                    <div class="dist-box-inner">
+                        <div class="dist-box-front" style="background-image: url(https://www.keralabackwater.com/pictures/travel/jatayu-nature-park417_b.jpeg);" >
+                            <h2>Kollam</h2>
+                        </div>
+                        <div class="dist-box-back">
+                            <br><br>
+                            <p>The Capital city of Kerala</p><br>
+                            <p style="font-family: Arial, Helvetica, sans-serif; font-size: small;color: black;"><a href="Trivandrum.html" target="-blank">Click here</a> to know more</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="dist-box">
+                    <div class="dist-box-inner">
+                        <div class="dist-box-front" style="background-image: url(https://geringerglobaltravel.com/wp-content/uploads/archive/2013/01/Aranmula-Snake-Boat-Race-Kerala_8497.jpg);" >
+                            <h2>Pathanamthitta</h2>
+                        </div>
+                        <div class="dist-box-back">
+                            <h2>Details</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="dist-box">
+                    <div class="dist-box-inner">
+                        <div class="dist-box-front" style="background-image: url(https://www.southerngreen.co.in/images/kovalam_66.jpg);" >
+                            <h2>Alappuzha</h2>
+                        </div>
+                        <div class="dist-box-back">
+                            <h2>Details</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">            
+            <div class="col">
+                <div class="dist-box">
+                    <div class="dist-box-inner">
+                        <div class="dist-box-front" style="background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/2/22/BHM_B2.jpg/220px-BHM_B2.jpg);" >
+                            <h2>Kottayam</h2>
+                        </div>
+                        <div class="dist-box-back">
+                            <h2>Details</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="dist-box">
+                    <div class="dist-box-inner">
+                        <div class="dist-box-front" style="background-image: url(https://www.woodnotethekkady.com/wp-content/uploads/2019/06/periyar.jpg);" >
+                            <h2>Idukki</h2>
+                        </div>
+                        <div class="dist-box-back">
+                            <h2>Details</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="dist-box">
+                    <div class="dist-box-inner">
+                        <div class="dist-box-front" style="background-image: url(https://www.woodnotethekkady.com/wp-content/uploads/2019/06/periyar.jpg);" >
+                            <h2>Ernakulam</h2>
+                        </div>
+                        <div class="dist-box-back">
+                            <h2>Details</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="dist-box">
+                    <div class="dist-box-inner">
+                        <div class="dist-box-front" style="background-image: url(https://www.woodnotethekkady.com/wp-content/uploads/2019/06/periyar.jpg);" >
+                            <h2>Thrissur</h2>
+                        </div>
+                        <div class="dist-box-back">
+                            <h2>Details</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="dist-box">
+                    <div class="dist-box-inner">
+                        <div class="dist-box-front" style="background-image: url(https://www.woodnotethekkady.com/wp-content/uploads/2019/06/periyar.jpg);" >
+                            <h2>Palakkad</h2>
+                        </div>
+                        <div class="dist-box-back">
+                            <h2>Details</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="dist-box">
+                    <div class="dist-box-inner">
+                        <div class="dist-box-front" style="background-image: url(https://www.woodnotethekkady.com/wp-content/uploads/2019/06/periyar.jpg);" >
+                            <h2>Malappuram</h2>
+                        </div>
+                        <div class="dist-box-back">
+                            <h2>Details</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="dist-box">
+                    <div class="dist-box-inner">
+                        <div class="dist-box-front" style="background-image: url(https://www.woodnotethekkady.com/wp-content/uploads/2019/06/periyar.jpg);" >
+                            <h2>Kozhikkod</h2>
+                        </div>
+                        <div class="dist-box-back">
+                            <h2>Details</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="dist-box">
+                    <div class="dist-box-inner">
+                        <div class="dist-box-front" style="background-image: url(https://www.woodnotethekkady.com/wp-content/uploads/2019/06/periyar.jpg);" >
+                            <h2>Wayanadu</h2>
+                        </div>
+                        <div class="dist-box-back">
+                            <h2>Details</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+
+            </div>
+            <div class="col">
+                <div class="dist-box">
+                    <div class="dist-box-inner">
+                        <div class="dist-box-front" style="background-image: url(https://www.woodnotethekkady.com/wp-content/uploads/2019/06/periyar.jpg);" >
+                            <h2>Kannur</h2>
+                        </div>
+                        <div class="dist-box-back">
+                            <h2>Details</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="dist-box">
+                    <div class="dist-box-inner">
+                        <div class="dist-box-front" style="background-image: url(https://www.woodnotethekkady.com/wp-content/uploads/2019/06/periyar.jpg);" >
+                            <h2>Kasarkod</h2>
+                        </div>
+                        <div class="dist-box-back">
+                            <h2>Details</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+
+            </div>
+        </div>
+    </div>
+    
+
+</body>
+</html>

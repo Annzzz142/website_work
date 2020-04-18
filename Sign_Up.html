@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign_up</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: sans-serif;
+            background: linear-gradient(to right, midnightblue,darkmagenta);
+        }
+
+        .box {
+            width: 500px;
+            padding: 40px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            background:black;
+            text-align: center;
+            transition: 0.25s;
+            margin-top: 100px
+        }
+
+        .box input[type="text"],.box input[type="password"],.box input[type="tel"], .box input[type="date"], .box input[type="email"]{
+            border: 0;
+            background: none;
+            display: block;
+            margin: 20px auto;
+            text-align: center;
+            border: 2px solid #3498db;
+            padding: 10px 10px;
+            width: 250px;
+            outline: none;
+            color: white;
+            border-radius: 24px;
+            transition: 0.25s
+        }
+
+        .box h1 {
+            color:magenta;
+            text-transform: uppercase;
+            font-weight: 500
+        }
+
+        .box input[type="text"]:focus,.box input[type="password"]:focus, .box input[type="tel"]:focus, .box input[type="date"]:focus, .box input[type="email"]:focus{
+            width: 300px;
+            border-color: #2ecc71
+        }
+
+        .box input[type="submit"] {
+            border: 0;
+            background: none;
+            display: block;
+            margin: 20px auto;
+            text-align: center;
+            border: 2px solid #2ecc71;
+            padding: 14px 40px;
+            outline: none;
+            color: white;
+            border-radius: 24px;
+            transition: 0.25s;
+            cursor: pointer
+        }
+
+        .box input[type="submit"]:hover {
+            background: #2ecc71
+        }
+
+        .forgot {
+            text-decoration: underline
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-7">
+                <div class="card">
+                    <form class="box">
+                        <h1>Signup</h1>
+                        <p class="text-muted">Enter the data and signup easily!</p> 
+                        <input type="text" id="name" placeholder="Name" required>
+                        <input type="date" id="dob" placeholder="Date of Birth" onfocus="(this.type='date')" required>
+                        <input type="email" id="mail" placeholder="E-mail" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2, 4}$" required>
+                        <input type="tel" id="phone" placeholder="Mobile" pattern="^\d{10}$" required>
+                        <input type="text" id="uname" placeholder="Username" required>
+                        <input type="password" id="pwd1" placeholder="password" required>
+                        <input type="password" id="pwd2" placeholder="confirm password" required>
+                        
+                        <input type="submit" onclick="signup();" name="" value="Sign Up" href="#">
+                        <input type="submit" onclick="reset();" name="" value="Reset">
+
+                        <div class="flex-col-c p-t-224">
+                            <span class="txt2 p-b-10">Already have an account?</span>
+                            <a href="Log_In.html" class="">Login here</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function reset(){
+		    document.getElementById("name").innerHTML=" ";
+		    document.getElementById("mail").innerHTML=" ";
+            document.getElementById("phone").innerHTML=" ";
+            document.getElementById("uname").innerHTML=" ";
+            document.getElementById("pwd1").innerHTML=" ";
+            document.getElementById("pwd2").innerHTML=" ";
+        }
+
+        function signup()
+        {
+            var nm=document.getElementById("name").value;
+            var ml=document.getElementById("mail").value;
+            var ph=document.getElementById("phone").value;
+            var un=document.getElementById("uname").value;
+            var p1=document.getElementById("pwd1").value;
+            var p2=document.getElementById("pwd2").value;
+
+           // console.log(p1);
+           // console.log(p2);
+ 
+		    if(p1.length > 15 || p1.length < 6){
+			    alert('Password min length is 6 and max length is 15');
+		    }
+            else if(p1!=p2){
+                alert('Passwords mismatch');
+            }
+		    else{
+	            alert('Your sign up is success! Please login using your credentials');
+                
+            }
+	    }		
+    </script>
+
+</body>
+</html>

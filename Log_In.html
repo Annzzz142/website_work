@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: sans-serif;
+            background: linear-gradient(to left, green, black)
+        }
+
+        .box {
+            width: 500px;
+            padding: 40px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            background: #191919;
+            text-align: center;
+            transition: 0.25s;
+            margin-top: 100px
+        }
+
+        .box input[type="text"],.box input[type="password"] {
+            border: 0;
+            background: none;
+            display: block;
+            margin: 20px auto;
+            text-align: center;
+            border: 2px solid #3498db;
+            padding: 10px 10px;
+            width: 250px;
+            outline: none;
+            color: white;
+            border-radius: 24px;
+            transition: 0.25s
+        }
+
+        .box h1 {
+            color: white;
+            text-transform: uppercase;
+            font-weight: 500
+        }
+
+        .box input[type="text"]:focus,.box input[type="password"]:focus {
+            width: 300px;
+            border-color: #2ecc71
+        }
+
+        .box input[type="submit"] {
+            border: 0;
+            background: none;
+            display: block;
+            margin: 20px auto;
+            text-align: center;
+            border: 2px solid #2ecc71;
+            padding: 14px 40px;
+            outline: none;
+            color: white;
+            border-radius: 24px;
+            transition: 0.25s;
+            cursor: pointer
+        }
+
+        .box input[type="submit"]:hover {
+            background: #2ecc71
+        }
+
+        .forgot {
+            text-decoration: underline
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-7">
+                <div class="card">
+                    <form class="box">
+                        <h1>Login</h1>
+                        <p class="text-muted"> Please enter your username and password!</p> 
+                        <input type="text" id="un" placeholder="Username" required> 
+                        <input type="password" id="pass" placeholder="Password" required> 
+                            <a class="forgot text-muted" href="#">Forgot password?</a> 
+                        <input type="submit" onclick="login();" name="" value="Login">
+
+                        <div class="flex-col-c p-t-224">
+                            <span class="txt2 p-b-10">Don't have an account?</span>
+                            <a href="Sign_Up.html" class="">Sign up now</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function login(){
+		    var uname = document.getElementById("un").value;
+		    var pwd = document.getElementById("pass").value;
+
+           // var userName= "Annzzz142";
+            //var password= "annzzz@142";
+
+
+		    if(uname=="Annzzz142" && pwd=="annzzz@142"){
+			    alert("Logged in successfully");
+                //window.location.href="C:\Users\Maria Sunny\keralaTourism\ditricts.html";
+		    }
+		    else{
+	            alert("Invalid username or password");
+			}
+	    }		
+    </script>
+
+</body>
+</html>
