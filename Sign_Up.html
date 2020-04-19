@@ -78,13 +78,12 @@
 <body>
     <div class="container">
         <div class="row">
-            <div class="col-md-7">
+            <div class="col col-12 col-md-6">
                 <div class="card">
                     <form class="box">
                         <h1>Signup</h1>
                         <p class="text-muted">Enter the data and signup easily!</p> 
                         <input type="text" id="name" placeholder="Name" required>
-                        <input type="date" id="dob" placeholder="Date of Birth" onfocus="(this.type='date')" required>
                         <input type="email" id="mail" placeholder="E-mail" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2, 4}$" required>
                         <input type="tel" id="phone" placeholder="Mobile" pattern="^\d{10}$" required>
                         <input type="text" id="uname" placeholder="Username" required>
@@ -114,8 +113,7 @@
             document.getElementById("pwd2").innerHTML=" ";
         }
 
-        function signup()
-        {
+        function signup(){
             var nm=document.getElementById("name").value;
             var ml=document.getElementById("mail").value;
             var ph=document.getElementById("phone").value;
@@ -123,18 +121,41 @@
             var p1=document.getElementById("pwd1").value;
             var p2=document.getElementById("pwd2").value;
 
-           // console.log(p1);
-           // console.log(p2);
+            var mobPattern=/^\d{10}$/;
+            var mailPattern=/[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2, 4}$/;
  
-		    if(p1.length > 15 || p1.length < 6){
-			    alert('Password min length is 6 and max length is 15');
+		    
+            if(nm==""){
+                alert('Name cannot leave empty');
+            }
+            else if(ml==""){
+                alert('Please enter your mail id');
+            }
+            else if(ml!=""){
+                if(ml.value.match(mailPattern)){
+                    alert('mail id is validated');
+                }  
+                else{
+                    alert('invalid mail id');
+                }
+            }
+            else if(ph==""){
+                alert('please enter your mobile number');
+            }
+            else if(isNaN(ph)){
+                alert('Phone number can only be numbers');
+            }
+            else if(un==""){
+                alert('please enter Username');
+            }
+            else if(p1.length > 15 || p1.length < 6){
+			    alert('Password should have min 6 chrachters and cannot exceed 15');
 		    }
             else if(p1!=p2){
-                alert('Passwords mismatch');
+                alert('Passwords should be the same');
             }
 		    else{
-	            alert('Your sign up is success! Please login using your credentials');
-                
+	            alert('Your sign up is success! Please login using your credentials');     
             }
 	    }		
     </script>
